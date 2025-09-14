@@ -1,5 +1,5 @@
 import { useTheme } from './useTheme';
-import { ThemeGroup } from '../types';
+import { ThemeGroup } from '../../GrowthPlanColors/growthPlanColors';
 
 export const useThemeColor = (group: ThemeGroup, variant?: string) => {
   const { getColor, getContrastColor } = useTheme();

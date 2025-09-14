@@ -13,5 +13,4 @@ export interface ThemeProviderProps {
   defaultTheme?: ThemeGroup;
 }
 
-export type ColorVariant = 
-  | 'primary' | 'primaryLight' | 'primaryLightest' | 'primaryDark' | 'primaryDarkest';
+// ColorVariant is now exported from growthPlanColors.ts to avoid conflicts
