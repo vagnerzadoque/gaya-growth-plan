@@ -29,7 +29,7 @@
 1. **Vá para a aba "Actions"**
 2. **Verifique se o workflow "Deploy Storybook and Publish to NPM" está rodando**
 3. **Aguarde a conclusão (pode levar alguns minutos)**
-4. **Acesse: `https://vagnerzadoque.github.io/Gaya-growthplan/`**
+4. **Acesse: `https://vagnerzadoque.github.io/gaya-growth-plan/`**
 
 ## 🛠️ Comandos Úteis
 
@@ -72,9 +72,9 @@ npm run preview
 
 ## 📚 URLs Importantes
 
-- **Storybook**: https://vagnerzadoque.github.io/Gaya-growthplan/
-- **Repositório**: https://github.com/vagnerzadoque/Gaya-growthplan
-- **Issues**: https://github.com/vagnerzadoque/Gaya-growthplan/issues
+- **Storybook**: https://vagnerzadoque.github.io/gaya-growth-plan/
+- **Repositório**: https://github.com/vagnerzadoque/gaya-growth-plan
+- **Issues**: https://github.com/vagnerzadoque/gaya-growth-plan/issues
 
 ## ✅ Checklist de Deploy
 

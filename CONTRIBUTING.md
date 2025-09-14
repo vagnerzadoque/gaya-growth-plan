@@ -12,8 +12,8 @@
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/vagnerzadoque/Gaya-growthplan.git
-   cd Gaya-growthplan
+   git clone https://github.com/vagnerzadoque/gaya-growth-plan.git
+   cd gaya-growth-plan
    ```
 
 2. **Instale as dependências**
@@ -80,7 +80,7 @@ npm run test:coverage
 ### Estrutura do Projeto
 
 ```
-Gaya-growthplan/
+gaya-growth-plan/
 ├── svg/                    # Arquivos SVG originais
 │   ├── filled-action-*.svg
 │   ├── filled-alert-*.svg
@@ -155,7 +155,7 @@ npm run build:icons
 ### Contato
 
 Para dúvidas ou problemas:
-- Abra uma [issue](https://github.com/vagnerzadoque/Gaya-growthplan/issues)
+- Abra uma [issue](https://github.com/vagnerzadoque/gaya-growth-plan/issues)
 - Entre em contato com a equipe
 
 ---

@@ -117,7 +117,7 @@ src/icons/ (componentes React)
 
 O Storybook está configurado com:
 
-- [Storybook - link](https://vagnerzadoque.github.io/Gaya-growthplan/)
+- [Storybook - link](https://vagnerzadoque.github.io/gaya-growth-plan/)
 
 - **Icon Search**: Galeria interativa com busca por nome e categoria
 - **Documentação automática**: Baseada em TypeScript
@@ -129,7 +129,7 @@ Para acessar: `http://localhost:6006`
 ## 🏗️ Estrutura do Projeto
 
 ```
-Gaya-growthplan/
+gaya-growth-plan/
 ├── src/
 │   ├── icons/           # Componentes de ícones gerados automaticamente
 │   ├── Icon.tsx         # Componente wrapper principal
