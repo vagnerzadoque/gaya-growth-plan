@@ -1,14 +1,38 @@
 import React from 'react';
 import { IconProps } from './types';
 import { iconMapping, availableIcons } from './icons/mapping';
+import { useTheme } from './theme/hooks/useTheme';
+
 export interface IconComponentProps extends IconProps {
   name: string;
+  themeColor?: boolean;
+  themeVariant?: string;
 }
 
-export const Icon: React.FC<IconProps> = ({ name = '', size = 24, color = 'currentColor' }) => {
+export const Icon: React.FC<IconComponentProps> = ({ 
+  name = '', 
+  size = 24, 
+  color = 'currentColor',
+  themeColor = false,
+  themeVariant
+}) => {
   let IconComponent = iconMapping[name];
- return (<>
-     <IconComponent size={size} color={color} />
+  
+  // Tenta usar o tema se themeColor for true e não houver cor customizada
+  let finalColor = color;
+  
+  if (themeColor && color === 'currentColor') {
+    try {
+      const { getColor, currentTheme } = useTheme();
+      finalColor = getColor(currentTheme, themeVariant);
+    } catch (error) {
+      // Se não estiver dentro de um ThemeProvider, mantém currentColor
+      finalColor = 'currentColor';
+    }
+  }
+  
+  return (<>
+     <IconComponent size={size} color={finalColor} />
  </>)
  
 };

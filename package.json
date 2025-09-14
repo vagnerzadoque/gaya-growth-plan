@@ -1,7 +1,7 @@
 {
-  "name": "gds-icons-react",
-  "version": "1.0.3",
-  "description": "Biblioteca de ícones React moderna construída com Vite",
+  "name": "gaya-growth-plan",
+  "version": "1.0.0",
+  "description": "Biblioteca de ícones React",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -26,7 +26,8 @@
     "build-storybook": "storybook build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "lint:fix": "eslint src --ext ts,tsx --fix",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "icons": "yarn build:icons && yarn optimize:svgs"
   },
   "keywords": [
     "react",
