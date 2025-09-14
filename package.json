@@ -1,0 +1,83 @@
+{
+  "name": "gds-icons-react",
+  "version": "1.0.3",
+  "description": "Biblioteca de ícones React moderna construída com Vite",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:icons": "node scripts/build-icons.cjs",
+    "optimize:svgs": "node scripts/optimize-svgs.cjs",
+    "preview": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint src --ext ts,tsx --fix",
+    "type-check": "tsc --noEmit"
+  },
+  "keywords": [
+    "react",
+    "icons",
+    "svg",
+    "typescript",
+    "vite",
+    "storybook"
+  ],
+  "author": "Vagner Barbosa Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vagnerzadoque/g-icons.git"
+  },
+  "homepage": "https://vagnerzadoque.github.io/g-icons/?path=/story/icons-icon-search--icon-gallery",
+  "bugs": {
+    "url": "https://github.com/vagnerzadoque/g-icons.git/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@storybook/addon-essentials": "^8.0.0",
+    "@storybook/addon-interactions": "^8.0.0",
+    "@storybook/addon-links": "^8.0.0",
+    "@storybook/react": "^8.0.0",
+    "@storybook/react-vite": "^8.0.0",
+    "@storybook/test": "^8.0.0",
+    "@types/node": "^24.0.6",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^7.0.0",
+    "@typescript-eslint/parser": "^7.0.0",
+    "@vitejs/plugin-react": "^4.6.0",
+    "cheerio": "^1.0.0-rc.12",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^8.0.0",
+    "svgo": "^3.2.0",
+    "terser": "^5.43.1",
+    "typescript": "^5.2.0",
+    "vite": "^5.0.0",
+    "vite-plugin-dts": "^3.7.0"
+  },
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
