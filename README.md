@@ -1,6 +1,6 @@
-# GDS-Icons-React
+# Gaya GrowthPlan - Sistema de Ícones e Tema
 
-Uma biblioteca de ícones React moderna construída com Vite e TypeScript.
+Sistema completo de ícones React com tema GrowthPlan, construído com Vite, TypeScript e Storybook.
 
 ## 🚀 Características
 
@@ -14,13 +14,14 @@ Uma biblioteca de ícones React moderna construída com Vite e TypeScript.
 ## 📦 Instalação
 
 ```bash
-npm install g-icons
+npm install gaya-growth-plan
 ```
 
 ## 🎯 Uso
 
+### Ícones Básicos
 ```tsx
-import { Icon } from 'g-icons';
+import { Icon } from 'gaya-growth-plan';
 
 function App() {
   return (
@@ -28,6 +29,19 @@ function App() {
       <Icon name="filled-action-add" size={24} color="#007bff" />
       <Icon name="filled-action-check" size={32} color="#28a745" />
     </div>
+  );
+}
+```
+
+### Sistema de Tema
+```tsx
+import { ThemeProvider, Icon } from 'gaya-growth-plan';
+
+function App() {
+  return (
+    <ThemeProvider defaultTheme="crystal">
+      <Icon name="filled-content-trophystar" themeColor variant="primaryLight" />
+    </ThemeProvider>
   );
 }
 ```
@@ -103,7 +117,7 @@ src/icons/ (componentes React)
 
 O Storybook está configurado com:
 
-- [Storybook - link](https://vagnerzadoque.github.io/g-icons/?path=/story/icons-icon-search--icon-gallery)
+- [Storybook - link](https://vagnerzadoque.github.io/Gaya-growthplan/)
 
 - **Icon Search**: Galeria interativa com busca por nome e categoria
 - **Documentação automática**: Baseada em TypeScript
@@ -115,7 +129,7 @@ Para acessar: `http://localhost:6006`
 ## 🏗️ Estrutura do Projeto
 
 ```
-g-icons/
+Gaya-growthplan/
 ├── src/
 │   ├── icons/           # Componentes de ícones gerados automaticamente
 │   ├── Icon.tsx         # Componente wrapper principal

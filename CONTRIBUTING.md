@@ -1,4 +1,4 @@
-# Guia de Contribuição - G Icons
+# Guia de Contribuição - Gaya GrowthPlan
 
 ## 🚀 Como Contribuir
 
@@ -12,8 +12,8 @@
 
 1. **Clone o repositório**
    ```bash
-   git clone https://github.com/seu-usuario/g-icons.git
-   cd g-icons
+   git clone https://github.com/vagnerzadoque/Gaya-growthplan.git
+   cd Gaya-growthplan
    ```
 
 2. **Instale as dependências**
@@ -80,7 +80,7 @@ npm run test:coverage
 ### Estrutura do Projeto
 
 ```
-g-icons/
+Gaya-growthplan/
 ├── svg/                    # Arquivos SVG originais
 │   ├── filled-action-*.svg
 │   ├── filled-alert-*.svg
@@ -155,7 +155,7 @@ npm run build:icons
 ### Contato
 
 Para dúvidas ou problemas:
-- Abra uma [issue](https://github.com/seu-usuario/g-icons/issues)
+- Abra uma [issue](https://github.com/vagnerzadoque/Gaya-growthplan/issues)
 - Entre em contato com a equipe
 
 ---

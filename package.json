@@ -1,7 +1,7 @@
 {
   "name": "gaya-growth-plan",
   "version": "1.0.0",
-  "description": "Biblioteca de ícones React",
+  "description": "Sistema de ícones e tema GrowthPlan para React",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
@@ -41,11 +41,11 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vagnerzadoque/g-icons.git"
+    "url": "https://github.com/vagnerzadoque/Gaya-growthplan.git"
   },
-  "homepage": "https://vagnerzadoque.github.io/g-icons/?path=/story/icons-icon-search--icon-gallery",
+  "homepage": "https://vagnerzadoque.github.io/Gaya-growthplan/",
   "bugs": {
-    "url": "https://github.com/vagnerzadoque/g-icons.git/issues"
+    "url": "https://github.com/vagnerzadoque/Gaya-growthplan/issues"
   },
   "dependencies": {},
   "devDependencies": {
