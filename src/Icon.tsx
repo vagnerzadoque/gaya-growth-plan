@@ -7,6 +7,7 @@ export interface IconComponentProps extends IconProps {
   name: string;
   themeColor?: boolean;
   themeVariant?: string;
+  theme?: string;
 }
 
 export const Icon: React.FC<IconComponentProps> = ({ 
@@ -14,7 +15,8 @@ export const Icon: React.FC<IconComponentProps> = ({
   size = 24, 
   color = 'currentColor',
   themeColor = false,
-  themeVariant
+  themeVariant,
+  theme
 }) => {
   let IconComponent = iconMapping[name];
   
@@ -24,7 +26,8 @@ export const Icon: React.FC<IconComponentProps> = ({
   if (themeColor && color === 'currentColor') {
     try {
       const { getColor, currentTheme } = useTheme();
-      finalColor = getColor(currentTheme, themeVariant);
+      const themeToUse = theme || currentTheme;
+      finalColor = getColor(themeToUse as any, themeVariant);
     } catch (error) {
       // Se não estiver dentro de um ThemeProvider, mantém currentColor
       finalColor = 'currentColor';

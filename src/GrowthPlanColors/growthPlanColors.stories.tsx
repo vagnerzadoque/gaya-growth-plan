@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { Meta, StoryFn } from '@storybook/react'
-import { grouwthPlanColors } from './growthPlanColors'
+import { growthPlanColors } from './growthPlanColors'
 
 const componentStatus = `
 > ⚠️ **Observação:** Essas cores não são recomendadas para componentes core.
@@ -78,7 +78,7 @@ const CategoryBlock = ({ categoryName, colors }: { categoryName: string; colors:
 )
 
 export const AllColors: StoryFn = () => {
-  const colorGroups = grouwthPlanColors.color
+  const colorGroups = growthPlanColors.color
 
   return (
     <div style={{ padding: '2rem' }}>

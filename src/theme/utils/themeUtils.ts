@@ -1,11 +1,12 @@
-import { grouwthPlanColors } from '../../GrowthPlanColors/growthPlanColors';
-import { ThemeGroup, ColorVariant } from '../types';
+import { growthPlanColors } from '../../GrowthPlanColors/growthPlanColors';
+import { ThemeGroup } from '../../GrowthPlanColors/growthPlanColors';
+// ColorVariant import removed as it's not used
 
 /**
  * Verifica se uma cor existe no tema
  */
 export const isValidThemeColor = (group: ThemeGroup, variant: string): boolean => {
-  const colorGroup = grouwthPlanColors.color[group];
+  const colorGroup = growthPlanColors.color[group];
   if (!colorGroup) return false;
   
   return variant in colorGroup;
@@ -15,7 +16,7 @@ export const isValidThemeColor = (group: ThemeGroup, variant: string): boolean =
  * Obtém todas as cores de um grupo específico
  */
 export const getThemeGroupColors = (group: ThemeGroup) => {
-  return grouwthPlanColors.color[group] || {};
+  return growthPlanColors.color[group] || {};
 };
 
 /**
@@ -41,21 +42,21 @@ export const getAutoContrastColor = (hexColor: string): string => {
  * Obtém todas as cores disponíveis do tema
  */
 export const getAllThemeColors = () => {
-  return grouwthPlanColors.color;
+  return growthPlanColors.color;
 };
 
 /**
  * Obtém lista de grupos de cores disponíveis
  */
 export const getAvailableThemeGroups = (): ThemeGroup[] => {
-  return Object.keys(grouwthPlanColors.color) as ThemeGroup[];
+  return Object.keys(growthPlanColors.color) as ThemeGroup[];
 };
 
 /**
  * Obtém informações sobre uma cor específica
  */
 export const getColorInfo = (group: ThemeGroup, variant: string) => {
-  const colorGroup = grouwthPlanColors.color[group];
+  const colorGroup = growthPlanColors.color[group];
   if (!colorGroup) return null;
   
   const color = (colorGroup as any)[variant];

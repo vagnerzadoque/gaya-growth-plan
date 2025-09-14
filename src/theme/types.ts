@@ -1,13 +1,11 @@
-import { GrowthPlanColorsTypes } from '../GrowthPlanColors/growthPlanColors';
-
-export type ThemeGroup = keyof GrowthPlanColorsTypes['color'];
+import { GrowthPlanColors, ThemeGroup } from '../GrowthPlanColors/growthPlanColors';
 
 export interface ThemeContextType {
   currentTheme: ThemeGroup;
   setTheme: (theme: ThemeGroup) => void;
   getColor: (group: ThemeGroup, variant?: string) => string;
   getContrastColor: (group: ThemeGroup, variant?: string) => string;
-  colors: GrowthPlanColorsTypes['color'];
+  colors: GrowthPlanColors['color'];
 }
 
 export interface ThemeProviderProps {
@@ -16,10 +14,4 @@ export interface ThemeProviderProps {
 }
 
 export type ColorVariant = 
-  | 'crystal' | 'crystalLight' | 'crystalLightest' | 'crystalDark' | 'crystalDarkest'
-  | 'bronze' | 'bronzeLight' | 'bronzeLightest' | 'bronzeDark' | 'bronzeDarkest'
-  | 'silver' | 'silverLight' | 'silverLightest' | 'silverDark' | 'silverDarkest'
-  | 'gold' | 'goldLight' | 'goldLightest' | 'goldDark' | 'goldDarkest'
-  | 'sapphire' | 'sapphireLight' | 'sapphireLightest' | 'sapphireDark' | 'sapphireDarkest'
-  | 'diamond' | 'diamondLight' | 'diamondLightest' | 'diamondDark' | 'diamondDarkest'
-  | 'diamondPlus' | 'diamondPlusLight' | 'diamondPlusLightest' | 'diamondPlusDark' | 'diamondPlusDarkest';
+  | 'primary' | 'primaryLight' | 'primaryLightest' | 'primaryDark' | 'primaryDarkest';

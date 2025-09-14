@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useCallback } from 'react';
-import { grouwthPlanColors } from '../GrowthPlanColors/growthPlanColors';
-import { ThemeContextType, ThemeGroup, ThemeProviderProps } from './types';
+import { growthPlanColors } from '../GrowthPlanColors/growthPlanColors';
+import { ThemeContextType, ThemeProviderProps } from './types';
+import { ThemeGroup } from '../GrowthPlanColors/growthPlanColors';
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined);
 
@@ -15,24 +16,26 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
   }, []);
 
   const getColor = useCallback((group: ThemeGroup, variant?: string) => {
-    const colorGroup = grouwthPlanColors.color[group];
+    const colorGroup = growthPlanColors.color[group];
     if (!colorGroup) return '#000000';
     
     if (variant) {
-      return (colorGroup as any)[variant] || colorGroup[group as keyof typeof colorGroup];
+      return (colorGroup as any)[variant] || colorGroup.primary;
     }
     
-    return colorGroup[group as keyof typeof colorGroup];
+    return colorGroup.primary;
   }, []);
 
   const getContrastColor = useCallback((group: ThemeGroup, variant?: string) => {
-    const colorGroup = grouwthPlanColors.color[group];
+    const colorGroup = growthPlanColors.color[group];
     if (!colorGroup) return '#FFFFFF';
     
-    const baseVariant = variant || group;
-    const contrastKey = `on${baseVariant.charAt(0).toUpperCase()}${baseVariant.slice(1)}` as keyof typeof colorGroup;
+    if (variant) {
+      const contrastKey = `on${variant.charAt(0).toUpperCase()}${variant.slice(1)}` as keyof typeof colorGroup;
+      return (colorGroup as any)[contrastKey] || colorGroup.onPrimary;
+    }
     
-    return (colorGroup as any)[contrastKey] || colorGroup[`on${group.charAt(0).toUpperCase()}${group.slice(1)}` as keyof typeof colorGroup];
+    return colorGroup.onPrimary;
   }, []);
 
   const value: ThemeContextType = {
@@ -40,7 +43,7 @@ export const ThemeProvider: React.FC<ThemeProviderProps> = ({
     setTheme,
     getColor,
     getContrastColor,
-    colors: grouwthPlanColors.color
+    colors: growthPlanColors.color
   };
 
   return (
